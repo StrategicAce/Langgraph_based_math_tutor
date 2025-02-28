@@ -81,8 +81,6 @@ def Categorize_question(state):
     num_steps = int(state['num_steps'])
     num_steps += 1
 
-    question_category_generator = question_reciver | GROQ_LLM | StrOutputParser()
-
     #question categorization
     question_result = question_category_generator.invoke({"initial_question": initial_question})
     
@@ -109,8 +107,6 @@ def Question_answering(state):
 
     initial_question = data["question"]
     category = data["category"]
-
-    question_answering = question_answering | GROQ_LLM | JsonOutputParser()
 
     # question answer
     answer = question_answering.invoke({"initial_question": initial_question,

@@ -1,4 +1,4 @@
-# Langgraph based math tutor
+# LangGraph based math tutor
 
 This project is a math tutor developed using the **LangGraph** library to create a workflow that categorizes and answers math-related questions. The tutor can identify whether a question is math-related and, if so, provide an appropriate response.
 
